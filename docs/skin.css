@@ -342,11 +342,7 @@ menu .fixed {
   border-radius: 4px;
   padding: 15px;
 }
-#resources_mobile img {
-}
-#resources_mobile .resource_name {
-  color: #ee4d2e;
-}
+
 #resources_mobile .res_current {
   color: #f2f5f4;
   display: inline;
