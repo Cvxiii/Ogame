@@ -343,27 +343,6 @@ menu .fixed {
   padding: 15px;
 }
 
-#resources_mobile .res_current {
-  color: #f2f5f4;
-  display: inline;
-}
-#resources_mobile .res_current:after {
-  content: ' / ';
-}
-#resources_mobile .res_current.res_current_max {
-  color: #ee4d2e;
-}
-#resources_mobile .res_max {
-  color: #addc8d;
-  display: inline;
-}
-#resources_mobile #resource_mobile:last-child span[style] {
-  color: #ee4d2e !important;
-}
-#resources_mobile a:hover {
-  font-weight: normal;
-  color: #75c0c7 !important;
-}
 .badge {
   display: inline-block;
   font-size: 10px;
