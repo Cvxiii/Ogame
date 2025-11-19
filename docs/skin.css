@@ -343,7 +343,6 @@ menu .fixed {
   padding: 15px;
 }
 #resources_mobile img {
-  display: none;
 }
 #resources_mobile .resource_name {
   color: #ee4d2e;
