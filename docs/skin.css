@@ -206,8 +206,7 @@ menu .fixed {
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  font-family: "Font Awesome 5 Pro";
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 300;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
