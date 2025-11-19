@@ -95,62 +95,7 @@ header #planetSelector {
   padding: 5px 0px;
 }
 
-@media (max-width: 699px) {
-  top #planetSelector,
-  .wrapper .fixed #planetSelector,
-  header #planetSelector {
-    top: 50px;
-  }
 
-}
-
-@media (max-width: 799px) {
-    .planet-list {
-        display: none !important;
-    }
-}
-
-top #resource_mobile,
-.wrapper .fixed #resource_mobile,
-header #resource_mobile {
-  margin-top: 15px !important;
-}
-menu .fixed {
-  top: 50px;
-}
-.wrapper {
-  grid-template-rows: 50px 1fr auto;
-}
-.wrapper .fixed {
-  background: rgba(0, 0, 0, 0.9);
-}
-.wrapper .highlight {
-  color: #ee4d2e !important;
-  margin-top: 5px;
-  display: block;
-}
-.wrapper .player_names {
-  font-size: 10px;
-  color: #888;
-}
-.wrapper #hubOverview th,
-.wrapper #hubOverview td {
-  padding: 3px 5px;
-}
-.wrapper table {
-  width: 100% !important;
-  max-width: inherit !important;
-}
-.wrapper table th {
-  background: transparent;
-  border: none !important;
-  padding: 5px 10px !important;
-}
-.wrapper table td {
-  border: none !important;
-  outline: 1px solid #161618;
-  padding: 3px 10px;
-}
 .wrapper ul#menu {
   background: #161618;
   border-radius: 4px;
