@@ -111,7 +111,7 @@ header #planetSelector {
 }
 
 top #resource_mobile,
-.wrapper .fixed #resource_mobile,
+
 header #resource_mobile {
   margin-top: 15px !important;
 }
