@@ -1,7 +1,6 @@
 html {
   background-image: url('https://pr0gamehub.neffez.dev/background.jpg');
   background-size: cover;
-display:block;
 }
 .text-left {
   text-align: left !important;
