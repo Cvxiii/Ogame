@@ -3024,7 +3024,7 @@ window.PageMessages = function () {
             system: parseInt(parseResult[2]),
             planet: parseInt(parseResult[3]),
             type: parseResult[4] ? 'MOON' : 'PLANET',
-            attacker_lost: getInt(html.match(/Angreifer\: ([\.0-9]+)\</|/Attacke\: ([\.0-9]+)\</)[1]),
+            attacker_lost: getInt(html.match(/Angreifer\: ([\.0-9]+)\</)[1]),
             defender_lost: getInt(html.match(/Verteidiger\: ([\.0-9]+)\</|/Defender\: ([\.0-9]+)\</)[1]),
             metal: getInt(html.match(/(reportSteal|raportSteal) element901\"\>([\.0-9]+)\</)[2]),
             crystal: getInt(html.match(/(reportSteal|raportSteal) element902\"\>([\.0-9]+)\</)[2]),
