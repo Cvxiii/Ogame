@@ -1,6 +1,8 @@
 html {
   background-image: url('https://pr0gamehub.neffez.dev/background.jpg');
   background-size: cover;
+  visibility: visible;
+  opacity: 1;
 }
 .text-left {
   text-align: left !important;
@@ -440,9 +442,5 @@ content.hub .infos:last-child {
 /*Darknebula Fix*/
 body.mceContentBody, input, button, select, option, textarea, .ui-widget-content {
     backdrop-filter: none !important;
-}
-html {
-    visibility: visible;
-    opacity: 1;
 }
 /*# sourceMappingURL=skin.css.map */
