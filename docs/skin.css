@@ -76,7 +76,7 @@ content.research.hangar input[type=submit].b {
 header .planetImage,
 header .fixed img,
 logo .fixed a {
-  display: none !important;
+  display: none;
 }
 logo .fixed {
   background: url('https://pro-ffview.gamers-universe.eu/logo-n.png') no-repeat left center !important;
@@ -342,7 +342,7 @@ menu .fixed {
   padding: 15px;
 }
 #resources_mobile img {
-  display: none;
+  display: inline !important;
 }
 #resources_mobile .resource_name {
   color: #ee4d2e;
