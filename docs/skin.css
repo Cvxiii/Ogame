@@ -5,6 +5,9 @@ html {
 .text-left {
   text-align: left !important;
 }
+.infos{
+    border-radius: 0px !important;
+}
 .text-center {
   text-align: center !important;
 }
