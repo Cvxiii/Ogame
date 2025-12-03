@@ -1,0 +1,659 @@
+/* ===========
+   Design Tokens
+   =========== */
+
+:root {
+  --color-bg: #0b0b0d;
+  --color-surface: #161618;
+  --color-surface-alt: #1b1e1f;
+  --color-border: #222;
+  --color-primary: #ee4d2e;
+  --color-accent: #75c0c7;
+  --color-success: #addc8d;
+  --color-text: #f2f5f4;
+  --color-muted: #888;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --transition-fast: 150ms ease-out;
+}
+
+/* ===========
+   Global
+   =========== */
+
+html {
+  background-image: url('https://pr0gamehub.neffez.dev/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body {
+  color: var(--color-text);
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.02), transparent 60%),
+              var(--color-bg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ===========
+   Utilities
+   =========== */
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-red {
+  color: var(--color-primary) !important;
+}
+
+.text-blue {
+  color: var(--color-accent) !important;
+}
+
+.text-gray,
+.text-yellow {
+  color: var(--color-muted) !important;
+}
+
+.text-green {
+  color: var(--color-success) !important;
+}
+
+.build_submit {
+  color: #8bff6b;
+  margin-bottom: 15px;
+}
+
+/* ===========
+   Info Blocks
+   =========== */
+
+.infos {
+  border-radius: var(--radius-md) !important;
+  background: color-mix(in srgb, var(--color-surface) 90%, black 10%);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Home specific */
+
+content.home .infos {
+  padding: 15px;
+  margin: 0 0 15px 0;
+}
+
+content.home .infos ul {
+  margin: 0;
+  padding: 0 10px;
+}
+
+content.home .infos.noPadding,
+content.home .infos:last-child {
+  padding: 0 !important;
+}
+
+content.home .infos + br {
+  display: none;
+}
+
+content.home table.borderless tr,
+content.home table.borderless th,
+content.home table.borderless td {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Buildings / Hangar / Defense / Research */
+
+content.buildings .infos,
+content.hangar .infos,
+content.defense .infos,
+content.research .infos,
+content.buildings .infoso,
+content.hangar .infoso,
+content.defense .infoso,
+content.research .infoso {
+  margin: 15px 0 0 0;
+}
+
+/* Submit buttons in hangar-like contexts */
+
+content.buildings.hangar input[type=submit].b,
+content.hangar.hangar input[type=submit].b,
+content.defense.hangar input[type=submit].b,
+content.research.hangar input[type=submit].b {
+  border: 1px solid var(--color-border) !important;
+  color: var(--color-success) !important;
+  padding: 6px 16px !important;
+  background: var(--color-surface-alt) !important;
+  min-height: 0;
+  margin: 15px 0;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+content.buildings.hangar input[type=submit].b:hover,
+content.hangar.hangar input[type=submit].b:hover,
+content.defense.hangar input[type=submit].b:hover,
+content.research.hangar input[type=submit].b:hover {
+  background: color-mix(in srgb, var(--color-surface-alt) 80%, white 20%);
+  transform: translateY(-1px);
+}
+
+/* ===========
+   Header / Top / Planet selector
+   =========== */
+
+header .planetImage,
+header .fixed img,
+logo .fixed a {
+  display: none;
+}
+
+logo .fixed {
+  background: url('https://pro-ffview.gamers-universe.eu/logo-n.png') no-repeat left center !important;
+  background-size: contain !important;
+}
+
+top,
+.wrapper .fixed,
+header {
+  height: 60px;
+  min-height: 0;
+}
+
+top #planetSelector,
+.wrapper .fixed #planetSelector,
+header #planetSelector {
+  top: 15px;
+}
+
+@media (max-width: 699px) {
+  top #planetSelector,
+  .wrapper .fixed #planetSelector,
+  header #planetSelector {
+    top: 50px;
+  }
+}
+
+@media (max-width: 799px) {
+  .planet-list {
+    display: none !important;
+  }
+}
+
+top #resource_mobile,
+.wrapper .fixed #resource_mobile,
+header #resource_mobile {
+  margin-top: 15px !important;
+}
+
+/* ===========
+   Layout / Wrapper / Menu
+   =========== */
+
+menu .fixed {
+  top: 50px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 50px 1fr auto;
+  min-height: 100vh;
+}
+
+.wrapper .fixed {
+  background: rgba(0, 0, 0, 0.86);
+  backdrop-filter: blur(10px);
+}
+
+.wrapper .highlight {
+  color: var(--color-primary) !important;
+  margin-top: 5px;
+  display: block;
+}
+
+.wrapper .player_names {
+  font-size: 10px;
+  color: var(--color-muted);
+}
+
+/* Tables */
+
+.wrapper table {
+  width: 100% !important;
+  max-width: none !important;
+  border-collapse: collapse;
+}
+
+.wrapper #hubOverview th,
+.wrapper #hubOverview td {
+  padding: 3px 5px;
+}
+
+.wrapper table th {
+  background: transparent;
+  border: none !important;
+  padding: 5px 10px !important;
+  text-align: left;
+  font-weight: 600;
+}
+
+.wrapper table td {
+  border: none !important;
+  outline: 1px solid #161618;
+  padding: 6px 10px;
+}
+
+/* Main menu */
+
+.wrapper ul#menu {
+  background: var(--color-surface);
+  padding: 10px 0;
+  margin: 10px 0;
+  list-style: none;
+}
+
+.wrapper ul#menu li,
+.wrapper ul#menu li a {
+  border: none !important;
+  background: none !important;
+  text-align: left !important;
+  font-size: 12px;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 16px;
+  text-decoration: none;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.wrapper ul#menu li i,
+.wrapper ul#menu li a i {
+  display: inline-block;
+  width: 20px;
+  opacity: 0.75;
+}
+
+.wrapper ul#menu li:hover,
+.wrapper ul#menu li a:hover {
+  color: var(--color-accent) !important;
+  background: rgba(117, 192, 199, 0.08);
+  font-weight: 500 !important;
+}
+
+.wrapper ul#menu .menu-separator {
+  height: 1px !important;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.25) !important;
+  padding: 0 !important;
+  min-height: auto !important;
+  margin: 10px 16px;
+}
+
+/* Content area */
+
+.wrapper content {
+  padding-top: 10px;
+  max-width: 1400px !important;
+  margin-inline: auto;
+}
+
+/* ===========
+   Messages
+   =========== */
+
+.wrapper content .message {
+  position: relative;
+  background: var(--color-primary);
+  color: var(--color-bg);
+  text-align: left;
+  padding: 10px 16px 10px 50px;
+  top: 15px;
+  right: 15px;
+  z-index: 10000;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.wrapper content .message a {
+  color: inherit;
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.wrapper content .message::before {
+  content: "\f0e0";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  font-weight: 300;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+}
+
+.wrapper content .message:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.wrapper content .message:hover::before,
+.wrapper content .message:hover a,
+.wrapper content .message:hover a:hover {
+  font-weight: 300 !important;
+  color: var(--color-bg) !important;
+}
+
+/* ===========
+   Build list / Building layout
+   =========== */
+
+.wrapper content #buildlist {
+  border: none !important;
+  background: var(--color-surface) !important;
+  margin: 0 0 15px 0;
+  overflow: visible;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-radius: var(--radius-md);
+}
+
+.wrapper content #buildlist > div {
+  border: none;
+}
+
+.wrapper content #buildlist > div:nth-child(2) {
+  flex-basis: 250px;
+}
+
+.wrapper content #buildlist button {
+  margin: 10px 0;
+}
+
+.wrapper content #buildlist .bulida,
+.wrapper content #buildlist .bulidb,
+.wrapper content #buildlist .buildb {
+  float: none !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.wrapper content #buildlist .bulida span[style],
+.wrapper content #buildlist .bulidb span[style],
+.wrapper content #buildlist .buildb span[style] {
+  color: var(--color-primary) !important;
+}
+
+/* Building / Hangar cards */
+
+.wrapper content .building,
+.wrapper content .hangar > form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.wrapper content .building > div:nth-child(1),
+.wrapper content .hangar > form > div:nth-child(1) {
+  flex-basis: 25%;
+  min-width: 220px;
+  text-align: left;
+  background: var(--color-surface);
+}
+
+.wrapper content .building a:hover,
+.wrapper content .hangar > form a:hover {
+  color: var(--color-accent) !important;
+  font-weight: 500;
+}
+
+.wrapper content .building .building-left,
+.wrapper content .hangar > form .building-left {
+  height: auto;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 16px;
+}
+
+.wrapper content .building .building-left img,
+.wrapper content .hangar > form .building-left img {
+  height: 75px;
+  width: auto;
+  margin-right: 0 !important;
+  border-radius: var(--radius-sm);
+}
+
+.wrapper content .building .building-left span[style],
+.wrapper content .hangar > form .building-left span[style] {
+  color: var(--color-primary) !important;
+}
+
+.wrapper content .building .building-right,
+.wrapper content .hangar > form .building-right {
+  height: auto;
+  padding: 15px;
+  text-align: right;
+}
+
+.wrapper content .building .building-right form button,
+.wrapper content .hangar > form .building-right form button {
+  max-width: 100%;
+}
+
+/* ===========
+   Progress / Buttons / Panels
+   =========== */
+
+.wrapper .ui-progressbar {
+  background: var(--color-surface-alt) !important;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.wrapper .ui-progressbar .ui-progressbar-value {
+  background: var(--color-primary);
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  border: none;
+}
+
+.wrapper button {
+  padding: 6px 16px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.wrapper button:hover {
+  background: color-mix(in srgb, var(--color-surface-alt) 80%, white 20%);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Panels */
+
+.wrapper .planeto,
+.wrapper .infos,
+.wrapper .infoso,
+.wrapper .buildl {
+  background: var(--color-surface) !important;
+  border-radius: var(--radius-md);
+}
+
+.wrapper .planeto .buildn,
+.wrapper .infos .buildn,
+.wrapper .infoso .buildn,
+.wrapper .buildl .buildn {
+  background: var(--color-surface-alt);
+  padding: 15px;
+  border-radius: var(--radius-md);
+}
+
+/* ===========
+   Mobile resources
+   =========== */
+
+#resources_mobile img {
+  display: inline !important;
+}
+
+#resources_mobile .resource_name {
+  color: var(--color-primary);
+}
+
+#resources_mobile .res_current {
+  color: var(--color-text);
+  display: inline;
+}
+
+#resources_mobile .res_current::after {
+  content: ' / ';
+}
+
+#resources_mobile .res_current.res_current_max {
+  color: var(--color-primary);
+}
+
+#resources_mobile .res_max {
+  display: inline;
+}
+
+#resources_mobile #resource_mobile:last-child span[style] {
+  color: var(--color-primary) !important;
+}
+
+#resources_mobile a:hover {
+  font-weight: normal;
+  color: var(--color-accent) !important;
+}
+
+/* ===========
+   Badges
+   =========== */
+
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 3px 6px;
+  font-weight: 700;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+}
+
+.badge-ress,
+.badge-fight,
+.badge-ships,
+.badge-nothing,
+.badge-black-hole {
+  float: right;
+}
+
+.badge-ress {
+  background: var(--color-success);
+  color: #161618;
+}
+
+.badge-fight {
+  background: var(--color-primary);
+  color: var(--color-text);
+}
+
+.badge-ships {
+  background: var(--color-accent);
+  color: #161618;
+}
+
+.badge-nothing {
+  background: var(--color-muted);
+  color: #161618;
+}
+
+.badge-black-hole {
+  background: #000;
+  color: var(--color-primary);
+}
+
+/* ===========
+   Fades / Tooltip / Hub / Fleet
+   =========== */
+
+.fade-25,
+.fade-75 {
+  opacity: 0.25 !important;
+  transition: opacity 250ms ease-in-out;
+}
+
+.fade-25.fade-75,
+.fade-75.fade-75 {
+  opacity: 0.75 !important;
+}
+
+.fade-25:hover,
+.fade-75:hover {
+  opacity: 0.9 !important;
+}
+
+#tooltip {
+  max-width: 750px !important;
+}
+
+content.hub .infos,
+content.hub .infos:last-child {
+  padding: 15px !important;
+  margin: 0 0 15px 0 !important;
+}
+
+.fleet-movement a:hover {
+  color: var(--color-text) !important;
+}
+
+.fleet-movement a.tooltip {
+  font-weight: normal !important;
+}
+
+/* ===========
+   Darknebula fix
+   =========== */
+
+body.mceContentBody,
+input,
+button,
+select,
+option,
+textarea,
+.ui-widget-content {
+  backdrop-filter: none !important;
+}
