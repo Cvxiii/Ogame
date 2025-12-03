@@ -80,3 +80,126 @@ html {
 }
 
 /* Keep all your existing styles below - they will now scale properly */
+html {
+  background-image: url('https://pr0gamehub.neffez.dev/background.jpg');
+  background-size: cover;
+}
+
+/* Typography helpers */
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+
+/* Softer accent colors */
+.text-red {
+  /* was #ee4d2e */
+  color: #ff7a55 !important;
+}
+.text-blue {
+  /* was #75c0c7 */
+  color: #8fd0d7 !important;
+}
+.text-gray {
+  color: #a0a4aa !important;
+}
+.text-green {
+  /* was #addc8d */
+  color: #bde6a0 !important;
+}
+.build_submit {
+  /* was #8bff6b */
+  color: #b7f88f;
+  margin-bottom: 15px;
+}
+.text-yellow {
+  color: #e8d27a !important;
+}
+
+/* Info boxes a bit softer and rounded */
+.infos{
+  border-radius: 6px !important;
+}
+
+/* Content spacing */
+content.home .infos {
+  padding: 15px;
+  margin: 0 0 15px 0;
+}
+content.home .infos ul {
+  margin: 0;
+  padding: 0 10px;
+}
+content.home .infos.noPadding,
+content.home .infos:last-child {
+  padding: 0 !important;
+}
+content.home .infos + br {
+  display: none;
+}
+
+/* Tables */
+content.home table.borderless tr,
+content.home table.borderless tr > th,
+content.home table.borderless tr > td {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Section blocks */
+content.buildings .infos,
+content.hangar .infos,
+content.defense .infos,
+content.research .infos,
+content.buildings .infoso,
+content.hangar .infoso,
+content.defense .infoso,
+content.research .infoso {
+  margin: 15px 0 0 0;
+}
+
+/* Submit buttons in lists */
+content.buildings.hangar input[type=submit].b,
+content.hangar.hangar input[type=submit].b,
+content.defense.hangar input[type=submit].b,
+content.research.hangar input[type=submit].b {
+  border: 1px solid #26282b !important;
+  color: #bde6a0 !important;
+  padding: 5px 15px !important;
+  background: #2a2c30 !important;
+  min-height: 0;
+  margin: 15px 0;
+}
+
+/* Header / logo */
+header .planetImage,
+header .fixed img,
+logo .fixed a {
+  display: none;
+}
+logo .fixed {
+  background: url('https://pro-ffview.gamers-universe.eu/logo-n.png') no-repeat left center !important;
+  background-size: contain !important;
+}
+
+/* Top bars */
+top,
+.wrapper .fixed,
+header {
+  height: 60px;
+  min-height: 0;
+}
+top #planetSelector,
+.wrapper .fixed #planetSelector,
+header #planetSelector {
+  top: 15px;
+  width: auto;
+}
+
+@media (max-width: 699px) {
+  top #planetSelector,
+  .wrapper .fixed #planetSelector,
+  header #planetSelector {
+    top: 50px;
+  }
+}
+
