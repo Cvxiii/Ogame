@@ -1,3 +1,8 @@
+/* Optional: force no rounded corners anywhere */
+* {
+  border-radius: 0 !important;
+}
+
 html {
   background-image: url('https://pr0gamehub.neffez.dev/background.jpg');
   background-size: cover;
@@ -35,7 +40,7 @@ html {
 
 /* Info boxes a bit softer and rounded */
 .infos{
-  border-radius: 6px !important;
+  border-radius: 0 !important;
 }
 
 /* Content spacing */
