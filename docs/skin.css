@@ -1,26 +1,20 @@
-/* make the whole bar a vertical stack */
+/* horizontal bar */
 #resources_mobile {
-  display: flex;
-  flex-direction: column;   /* stack items vertically [web:44][web:56] */
-  align-items: stretch;     /* children take full width */
+  display: flex;            /* enable flexbox [web:41][web:56] */
+  flex-direction: row;      /* items in a row */
+  align-items: center;      /* vertically centered */
+  justify-content: flex-start;
+  flex-wrap: nowrap;        /* prevent line breaks */
+  gap: 8px;                 /* space between items (optional) */
 }
 
-/* ensure each resource row is on its own line */
+/* each resource item side by side */
 #resources_mobile > * {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* name left, value right (optional) */
+  display: inline-flex;
   align-items: center;
-  width: 100%;
-  margin: 2px 0;
+  white-space: nowrap;      /* keep labels/values on one line */
 }
 
-/* if you have .resource_name / .res_current etc.: */
-#resources_mobile .resource_name,
-#resources_mobile .res_current,
-#resources_mobile .res_max {
-  display: inline-block;
-}
 html {
   background-image: url('https://pr0gamehub.neffez.dev/background.jpg');
   background-size: cover;
