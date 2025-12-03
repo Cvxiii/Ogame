@@ -1,18 +1,14 @@
-/* horizontal bar */
-#resources_mobile {
-  display: flex;            /* enable flexbox [web:41][web:56] */
-  flex-direction: row;      /* items in a row */
-  align-items: center;      /* vertically centered */
-  justify-content: flex-start;
-  flex-wrap: nowrap;        /* prevent line breaks */
-  gap: 8px;                 /* space between items (optional) */
+/* make the icon sit on the same line as the text */
+#resources_mobile img {
+  vertical-align: middle;   /* align the image with the text line [web:67][web:73] */
+  display: inline-block;    /* ensure vertical-align works predictably [web:68] */
 }
 
-/* each resource item side by side */
-#resources_mobile > * {
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;      /* keep labels/values on one line */
+#resources_mobile img {
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  top: 1px; /* adjust +1 / -1 until it visually lines up */
 }
 
 html {
